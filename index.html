@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Adrii Ovcharov — Digital Product Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">Adrii Ovcharov</a>
+        <div class="nav-links">
+          <a
+            href="#work"
+            data-section="work"
+            data-en="SELECTED WORK"
+            data-uk="ОБРАНІ РОБОТИ"
+            >SELECTED WORK</a
+          >
+          <a
+            href="#projects"
+            data-section="projects"
+            data-en="PORTFOLIO"
+            data-uk="ПОРТФОЛІО"
+            >PORTFOLIO</a
+          >
+          <a
+            href="#about"
+            data-section="about"
+            data-en="ABOUT ME"
+            data-uk="ПРО МЕНЕ"
+            >ABOUT ME</a
+          >
+          <a
+            href="#contact"
+            data-section="contact"
+            data-en="CONTACT"
+            data-uk="КОНТАКТИ"
+            >CONTACT</a
+          >
+        </div>
+        <div class="nav-controls">
+          <div class="lang-toggle" id="langToggle">UA</div>
+          <div class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+          </div>
+          <div class="burger-btn" id="burgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="close-menu-btn" id="closeMenuBtn"></div>
+      <a href="#work" data-en="SELECTED WORK" data-uk="ОБРАНІ РОБОТИ"
+        >SELECTED WORK</a
+      >
+      <a href="#projects" data-en="PORTFOLIO" data-uk="ПОРТФОЛІО">PORTFOLIO</a>
+      <a href="#about" data-en="ABOUT ME" data-uk="ПРО МЕНЕ">ABOUT ME</a>
+      <a href="#contact" data-en="CONTACT" data-uk="КОНТАКТИ">CONTACT</a>
+    </div>
+
+    <main>
+      <section class="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <div class="hero-headline">
+            <span
+              data-en="Web designer & developer for"
+              data-uk="Вебдизайнер та розробник для"
+              >Web designer & developer for</span
+            ><br />
+            <span class="typewriter-accent" id="hero-typewriter"></span>
+          </div>
+          <div
+            class="hero-sub"
+            data-en="UI/UX design, Webflow & WordPress development focused on performance and usability."
+            data-uk="UI/UX дизайн, розробка на Webflow та WordPress з фокусом на продуктивність та зручність."
+          >
+            UI/UX design, Webflow & WordPress development focused on performance
+            and usability.
+          </div>
+          <div class="hero-actions">
+            <a
+              href="#work"
+              class="btn-primary"
+              data-en="View featured work"
+              data-uk="Дивитись роботи"
+              >View featured work</a
+            >
+            <a
+              href="#contact"
+              class="btn-outline"
+              data-en="Let's talk →"
+              data-uk="Зв'язатись →"
+              >Let's talk →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="featured-section">
+        <div class="container">
+          <div
+            class="section-label"
+            data-text-en="/ SELECTED WORK"
+            data-text-uk="/ ОБРАНІ РОБОТИ"
+            data-text="/ SELECTED WORK"
+          ></div>
+
+          <div class="featured-piece fade-up">
+            <div class="featured-visual">
+              <img src="images/chophytol.webp" alt="Chophytol" />
+            </div>
+            <div class="featured-caption">
+              <div>
+                <div class="featured-title">Chophytol</div>
+                <div class="featured-meta">
+                  WordPress · Custom Theme · E‑commerce
+                </div>
+              </div>
+              <div
+                class="featured-desc"
+                data-en="Website for the French medical product 'Chophytol' with easy navigation of instructions, dosages, and release forms."
+                data-uk="Сайт для французького медичного препарату «Хофітол» із зручною навігацією інструкцій, дозувань та форм випуску."
+              >
+                Website for the French medical product 'Chophytol' with easy
+                navigation of instructions, dosages, and release forms.
+              </div>
+              <a
+                href="https://chophytol.ua"
+                target="_blank"
+                class="featured-link"
+                data-en="Visit website →"
+                data-uk="Відвідати сайт →"
+                >Visit website →</a
+              >
+            </div>
+          </div>
+
+          <div class="featured-piece fade-up">
+            <div class="featured-visual">
+              <img src="images/novam-d.webp" alt="NovaMD" />
+            </div>
+            <div class="featured-caption">
+              <div>
+                <div class="featured-title">NovaMD</div>
+                <div class="featured-meta">
+                  Webflow · Landing Page · E‑commerce
+                </div>
+              </div>
+              <div
+                class="featured-desc"
+                data-en="Landing page for a menopause supplement brand. Built on Webflow with focus on speed, conversions, and responsive design."
+                data-uk="Лендінг для бренду добавок для жінок у період менопаузи. Розроблено на Webflow з акцентом на швидкість завантаження, конверсію та адаптивність."
+              >
+                Landing page for a menopause supplement brand. Built on Webflow
+                with focus on speed, conversions, and responsive design.
+              </div>
+              <a
+                href="https://novam-d.webflow.io/"
+                target="_blank"
+                class="featured-link"
+                data-en="Visit website →"
+                data-uk="Відвідати сайт →"
+                >Visit website →</a
+              >
+            </div>
+          </div>
+
+          <div class="featured-piece fade-up">
+            <div class="featured-visual">
+              <img src="images/promentor.webp" alt="Promentor" />
+            </div>
+            <div class="featured-caption">
+              <div>
+                <div class="featured-title">ProMentor</div>
+                <div class="featured-meta">
+                  Kajabi · Template Design · Coaching
+                </div>
+              </div>
+              <div
+                class="featured-desc"
+                data-en="A ready-to-fill Kajabi template for corporate coaching. Thought-out structure for quick launch of a company's training platform. For B2B segment."
+                data-uk="Готовий шаблон для Kajabi для корпоративного коучингу. Продумана структура для швидкого запуску навчальної платформи компанії. Для B2B-сегменту."
+              >
+                A ready-to-fill Kajabi template for corporate coaching.
+                Thought-out structure for quick launch of a company's training
+                platform. For B2B segment.
+              </div>
+              <a
+                href="https://www.inweba.com/template-promentor-home"
+                target="_blank"
+                class="featured-link"
+                data-en="Visit website →"
+                data-uk="Відвідати сайт →"
+                >Visit website →</a
+              >
+            </div>
+          </div>
+
+          <div class="featured-piece fade-up">
+            <div class="featured-visual">
+              <img src="images/barva.webp" alt="Barva" />
+            </div>
+            <div class="featured-caption">
+              <div>
+                <div class="featured-title">Barva</div>
+                <div class="featured-meta">
+                  UI/UX Design · Figma · E‑commerce
+                </div>
+              </div>
+              <div
+                class="featured-desc"
+                data-en="Design of a premium women's clothing store with Ukrainian embroidery. Combining traditional motifs with modern luxury aesthetics."
+                data-uk="Дизайн преміум магазину жіночого одягу з українською вишивкою. Поєднання традиційних мотивів із сучасною luxury-естетикою."
+              >
+                Design of a premium women's clothing store with Ukrainian
+                embroidery. Combining traditional motifs with modern luxury
+                aesthetics.
+              </div>
+              <a
+                href="https://www.behance.net/gallery/248533281/BARVA-Premium-Ukrainian-Embroidery-Store"
+                target="_blank"
+                class="featured-link"
+                data-en="Visit website →"
+                data-uk="Відвідати сайт →"
+                >Visit website →</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <div
+            class="section-label"
+            data-text-en="/ PORTFOLIO"
+            data-text-uk="/ ПОРТФОЛІО"
+            data-text="/ PORTFOLIO"
+          ></div>
+          <div class="filter-tabs">
+            <button
+              class="filter-btn active"
+              data-filter="all"
+              data-en="ALL"
+              data-uk="ВСІ"
+            >
+              ALL
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="wordpress"
+              data-en="WORDPRESS"
+              data-uk="WORDPRESS"
+            >
+              WORDPRESS
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="webflow"
+              data-en="WEBFLOW"
+              data-uk="WEBFLOW"
+            >
+              WEBFLOW
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="kajabi"
+              data-en="KAJABI"
+              data-uk="KAJABI"
+            >
+              KAJABI
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="design"
+              data-en="UI/UX DESIGN"
+              data-uk="UI/UX ДИЗАЙН"
+            >
+              UI/UX DESIGN
+            </button>
+          </div>
+          <div class="projects-grid" id="projects-grid">
+            <!-- Всі картки портфоліо будуть вставлені через JavaScript для збереження чистоти коду -->
+          </div>
+          <div class="show-more-wrapper">
+            <button
+              class="show-more-btn"
+              id="showMoreBtn"
+              data-en="SHOW MORE"
+              data-uk="ПОКАЗАТИ БІЛЬШЕ"
+            >
+              SHOW MORE (3)
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="container">
+          <div
+            class="section-label"
+            data-text-en="/ ABOUT ME"
+            data-text-uk="/ ПРО МЕНЕ"
+            data-text="/ ABOUT ME"
+          ></div>
+          <div class="about-grid fade-up">
+            <div class="about-main">
+              <p
+                data-en="I'm Adrii Ovcharov — a web developer & UI/UX designer focused on crafting premium digital experiences for modern brands."
+                data-uk="Я Адрій Овчаров — веброзробник та UI/UX дизайнер, зосереджений на створенні преміальних цифрових продуктів для сучасних брендів."
+              >
+                I'm Adrii Ovcharov — a web developer & UI/UX designer focused on
+                crafting premium digital experiences for modern brands.
+              </p>
+              <p
+                data-en="I design and build websites where aesthetics, performance, and strategy work together seamlessly."
+                data-uk="Я розробляю сайти, де естетика, продуктивність та стратегія працюють разом бездоганно."
+              >
+                I design and build websites where aesthetics, performance, and
+                strategy work together seamlessly.
+              </p>
+              <p
+                data-en="The result is digital products that feel modern, intuitive, and built to last."
+                data-uk="Результат — цифрові продукти, які є сучасними, інтуїтивно зрозумілими та створеними на довго."
+              >
+                The result is digital products that feel modern, intuitive, and
+                built to last.
+              </p>
+              <div class="focus-items">
+                <span class="focus-item">Design leadership</span>
+                <span class="focus-item">Technical direction</span>
+                <span class="focus-item">Digital strategy</span>
+                <span class="focus-item">Webflow expert</span>
+                <span class="focus-item">WordPress dev</span>
+                <span class="focus-item">UI/UX design</span>
+              </div>
+            </div>
+            <div class="about-photo">
+              <div class="photo-frame">
+                <img src="images/avatar.webp" alt="Adrii Ovcharov" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div
+            class="section-label"
+            data-text-en="/ CONTACT ME"
+            data-text-uk="/ ЗВ'ЯЗАТИСЬ"
+            data-text="/ CONTACT ME"
+          ></div>
+          <div
+            class="contact-headline fade-up"
+            data-en="Let's create something<br />that stays."
+            data-uk="Давайте створимо щось,<br />що залишиться."
+          >
+            Let's create something<br />that stays.
+          </div>
+          <div class="contact-links fade-up">
+            <a href="mailto:datoshcode@gmail.com" class="contact-link"
+              >datoshcode@gmail.com</a
+            >
+            <a
+              href="https://t.me/Ovcharov_Andrii"
+              target="_blank"
+              class="contact-link"
+              >Telegram</a
+            >
+            <a
+              href="https://www.facebook.com/OvcharovCoder"
+              target="_blank"
+              class="contact-link"
+              >Facebook</a
+            >
+            <a
+              href="https://www.linkedin.com/in/andrii-ovcharov-101a24196/"
+              target="_blank"
+              class="contact-link"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">© 2026 Adrii Ovcharov</footer>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
