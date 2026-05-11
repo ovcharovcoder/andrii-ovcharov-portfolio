@@ -1,242 +1,36 @@
-// БАЗА ДАНИХ ПРОЄКТІВ
-const allProjectsData = [
-  // WORDPRESS
-  {
-    title: 'Chophytol',
-    category: 'wordpress',
-    descEn:
-      "Website for the French medical product 'Chophytol' with easy navigation of instructions, dosages, and release forms.",
-    descUk:
-      'Сайт для французького медичного препарату «Хофітол» із зручною навігацією інструкцій, дозувань та форм випуску.',
-    img: 'images/chophytol.webp',
-    link: 'https://chophytol.ua',
-  },
-  {
-    title: 'Cardonat',
-    category: 'wordpress',
-    descEn:
-      "Website for 'Cardonat' supplement — a coenzyme complex with carnitine, lysine and B vitamins for recovery after illnesses and overstrain.",
-    descUk:
-      'Сайт для БАД «Кардонат» — коферментний комплекс з карнітином, лізином та вітамінами групи В для відновлення після хвороб та перенапруження.',
-    img: 'images/cardonat.webp',
-    link: 'https://cardonat.com.ua/',
-  },
-  {
-    title: 'Noksprey',
-    category: 'wordpress',
-    descEn:
-      "Website for 'Noksprey' — a line of products from Sperco for treating runny nose in adults and children.",
-    descUk:
-      'Сайт для «Нокспрей» — лінійки засобів від Sperco для лікування нежитю у дорослих та дітей.',
-    img: 'images/noksprey.webp',
-    link: 'https://noksprey.com.ua/',
-  },
-  {
-    title: 'Langes',
-    category: 'wordpress',
-    descEn:
-      "Website for 'Langes' — a cough treatment and respiratory protection remedy that thins mucus and activates local immunity.",
-    descUk:
-      'Сайт для «Лангес» — засобу для лікування кашлю та захисту дихальних шляхів.',
-    img: 'images/langes.webp',
-    link: 'https://langes.com.ua/',
-  },
-  {
-    title: 'Erotex',
-    category: 'wordpress',
-    descEn:
-      "Website for 'Erotex' — a delicate solution for couples who value natural sensations.",
-    descUk: 'Сайт для «Еротекс» — делікатне рішення для пар.',
-    img: 'images/erotex.webp',
-    link: 'https://erotex.com.ua/',
-  },
-  {
-    title: 'Lactazik',
-    category: 'wordpress',
-    descEn:
-      "Website for 'Lactazik' — a remedy that helps children digest milk and eliminates colic and bloating.",
-    descUk:
-      'Сайт для «Лактазік» — засіб, який допомагає дітям засвоювати молоко.',
-    img: 'images/lactazik.webp',
-    link: 'https://lactazik.com.ua/',
-  },
-  // WEBFLOW
-  {
-    title: 'NovaMD',
-    category: 'webflow',
-    descEn:
-      'Landing page for a menopause supplement brand. Built on Webflow with focus on speed, conversions, and responsive design.',
-    descUk: 'Лендінг для бренду добавок для жінок у період менопаузи.',
-    img: 'images/novam-d.webp',
-    link: 'https://novam-d.webflow.io/',
-  },
-  {
-    title: 'Dream House',
-    category: 'webflow',
-    descEn:
-      "Website for 'Dream House' construction company — professional home construction according to any designs.",
-    descUk:
-      'Сайт будівельної компанії «Dream House» для професійного будівництва будинків.',
-    img: 'images/dreamhouse.webp',
-    link: 'https://dream-h.webflow.io/',
-  },
-  // KAJABI
-  {
-    title: 'ProMentor',
-    category: 'kajabi',
-    descEn:
-      'A ready-to-fill Kajabi template for corporate coaching. For B2B segment.',
-    descUk:
-      'Готовий шаблон для Kajabi для корпоративного коучингу. Для B2B-сегменту.',
-    img: 'images/promentor.webp',
-    link: 'https://www.inweba.com/template-promentor-home',
-  },
-  {
-    title: 'Samantha Parker',
-    category: 'kajabi',
-    descEn: 'A ready-to-fill Kajabi template for personal coaching.',
-    descUk: 'Готовий шаблон для Kajabi для персонального коучингу.',
-    img: 'images/samantha.webp',
-    link: 'https://kajabi-partner-5e06de.mykajabi.com/samantha-coaching-home-en',
-  },
-  {
-    title: 'Sabina Hertiz',
-    category: 'kajabi',
-    descEn: 'An innovative Kajabi template for business coaches.',
-    descUk: 'Інноваційний шаблон для Kajabi для бізнес-коучів.',
-    img: 'images/sabina.webp',
-    link: 'https://www.inweba.com/sabina-hertiz-home',
-  },
-  {
-    title: 'Dickens Academy',
-    category: 'kajabi',
-    descEn: 'Website for Dickens Academy — corporate coaching on Kajabi.',
-    descUk: 'Сайт для Dickens Academy — корпоративного коучингу на Kajabi.',
-    img: 'images/dickensacademy.webp',
-    link: 'https://www.dickensacademy.org/',
-  },
-  {
-    title: 'MTC Rider',
-    category: 'kajabi',
-    descEn:
-      'Website for MTC Rider Academy on Kajabi. Safe motorcycle riding courses.',
-    descUk:
-      'Сайт для MTC Rider Academy на Kajabi. Курси з безпечного водіння мотоциклів.',
-    img: 'images/mtc.webp',
-    link: 'https://ridingsmart.mykajabi.com/',
-  },
-  {
-    title: 'Physioloops',
-    category: 'kajabi',
-    descEn:
-      'Website for Physioloops on Kajabi. Medical practice treating TMJ disorders.',
-    descUk: 'Сайт для Physioloops на Kajabi. Медична практика.',
-    img: 'images/physioloops.webp',
-    link: 'https://www.physioloops.com/',
-  },
-  {
-    title: 'Train for Birth',
-    category: 'kajabi',
-    descEn: 'Website for Train for Birth on Kajabi. Home birth preparation.',
-    descUk:
-      'Сайт для Train for Birth на Kajabi. Підготовка до домашніх пологів.',
-    img: 'images/train_for_birth.webp',
-    link: 'https://www.trainforbirth.com/',
-  },
-  // UI/UX DESIGN
-  {
-    title: 'Barva',
-    category: 'design',
-    descEn:
-      "Design of a premium women's clothing store with Ukrainian embroidery.",
-    descUk: 'Дизайн преміум магазину жіночого одягу з українською вишивкою.',
-    img: 'images/barva.webp',
-    link: 'https://www.behance.net/gallery/248533281/BARVA-Premium-Ukrainian-Embroidery-Store',
-  },
-  {
-    title: 'LUNA',
-    category: 'design',
-    descEn:
-      "Conceptual design for a modern women's lingerie e-commerce website focused on elegance, clarity, and emotional connection.",
-    descUk: 'Концептуальний дизайн сучасного сайту жіночої білизни.',
-    img: 'images/luna.webp',
-    link: 'https://www.behance.net/gallery/248752563/LUNA-Lingerie-E-commerce-Website-Design',
-  },
-  {
-    title: 'TravelMate',
-    category: 'design',
-    descEn:
-      'Travel booking platform design focused on conversion, optimized UX, and premium visual style.',
-    descUk: 'Дизайн платформи бронювання подорожей з фокусом на конверсію.',
-    img: 'images/travelmate.webp',
-    link: 'https://www.behance.net/gallery/244190717/TravelMate-UXUI-Design-for-Travel-Marketplace',
-  },
-  {
-    title: 'Family Law',
-    category: 'design',
-    descEn: 'Conceptual website design for a family law attorney.',
-    descUk: 'Концептуальний дизайн сайту для адвоката з сімейного права.',
-    img: 'images/family_law.webp',
-    link: 'https://www.behance.net/gallery/248941511/Family-Law-Attorney-Website',
-  },
-  {
-    title: 'EcoWave',
-    category: 'design',
-    descEn:
-      'Premium environmental brand concept about protecting the environment and fighting plastic.',
-    descUk: 'Преміальна екологічна концепція бренду про захист довкілля.',
-    img: 'images/ecowave.webp',
-    link: 'https://www.behance.net/gallery/242585795/EcoWave-UIUX-Design-for-Sustainable-Product-Brand',
-  },
-  {
-    title: 'FitLife',
-    category: 'design',
-    descEn:
-      'Modern landing page design for an online fitness platform focused on home workouts.',
-    descUk: 'Дизайн сучасної лендінг-сторінки для онлайн-фітнес-платформи.',
-    img: 'images/fitlife.webp',
-    link: 'https://www.behance.net/gallery/247697517/FitLife-online-fitness-platform-landing-page-design',
-  },
-  {
-    title: 'Vineyard Dream',
-    category: 'design',
-    descEn:
-      'Website design for a small family winery nestled among hills and vineyards.',
-    descUk: 'Дизайн сайту для невеликої сімейної виноробні.',
-    img: 'images/vineyard_dream.webp',
-    link: 'https://www.behance.net/gallery/226707087/Vineyard-Dream-A-Tasteful-UIUX-Story',
-  },
-];
+// ФІЛЬТРАЦІЯ ТА ПАГІНАЦІЯ — ПРАЦЮЄ З HTML КАРТКАМИ
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectItems = document.querySelectorAll('.project-item');
+const showMoreBtn = document.getElementById('showMoreBtn');
 
-// ФУНКЦІЯ РЕНДЕРУ КАРТОК
-function renderProjects() {
-  const grid = document.getElementById('projects-grid');
-  if (!grid) return;
+let currentFilter = 'all';
+let visibleCount = 6; // ПОЧАТКОВА КІЛЬКІСТЬ КАРТОК — 6
+let currentLang = 'en';
 
-  let filteredData = allProjectsData;
-  if (currentFilter !== 'all') {
-    filteredData = allProjectsData.filter(p => p.category === currentFilter);
-  }
+function filterAndShow() {
+  // Спочатку фільтруємо за категорією
+  let filteredItems = [];
+  projectItems.forEach(item => {
+    const category = item.getAttribute('data-category');
+    if (currentFilter === 'all' || category === currentFilter) {
+      filteredItems.push(item);
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
+    }
+  });
 
-  const visibleData = filteredData.slice(0, visibleCount);
+  // Потім показуємо тільки visibleCount елементів
+  filteredItems.forEach((item, index) => {
+    if (index < visibleCount) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
 
-  grid.innerHTML = visibleData
-    .map(
-      p => `
-          <div class="project-item" data-category="${p.category}">
-            <div class="project-img"><img src="${p.img}" alt="${p.title}"></div>
-            <div class="project-info">
-              <div class="project-category">${p.category.toUpperCase()}</div>
-              <h3>${p.title}</h3>
-              <p data-en="${p.descEn.replace(/"/g, '&quot;')}" data-uk="${p.descUk.replace(/"/g, '&quot;')}">${currentLang === 'en' ? p.descEn : p.descUk}</p>
-              <a href="${p.link}" target="_blank" class="project-link" data-en="Visit website →" data-uk="Відвідати сайт →">Visit website →</a>
-            </div>
-          </div>
-        `,
-    )
-    .join('');
-
-  const remaining = filteredData.length - visibleCount;
+  // Оновлюємо кнопку SHOW MORE / SHOW LESS
+  const remaining = filteredItems.length - visibleCount;
   if (remaining <= 0) {
     showMoreBtn.style.display = 'inline-block';
     showMoreBtn.textContent = currentLang === 'en' ? 'SHOW LESS' : 'ПРИХОВАТИ';
@@ -246,38 +40,49 @@ function renderProjects() {
   }
 }
 
-// ФІЛЬТРАЦІЯ ТА ПАГІНАЦІЯ
-let currentFilter = 'all';
-let visibleCount = 6; // ПОЧАТКОВА КІЛЬКІСТЬ КАРТОК — 6
-let currentLang = 'en';
-
-const filterBtns = document.querySelectorAll('.filter-btn');
-const showMoreBtn = document.getElementById('showMoreBtn');
-
+// Обробники фільтрів
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     currentFilter = btn.getAttribute('data-filter');
     visibleCount = 6; // СКИДАЄМО ДО 6 ПРИ ЗМІНІ ФІЛЬТРУ
-    renderProjects();
+    filterAndShow();
   });
 });
 
+// Кнопка SHOW MORE / SHOW LESS
 showMoreBtn.addEventListener('click', () => {
-  let filteredData = allProjectsData;
-  if (currentFilter !== 'all') {
-    filteredData = allProjectsData.filter(p => p.category === currentFilter);
-  }
-  const isAllVisible = visibleCount >= filteredData.length;
+  // Отримуємо поточну кількість відфільтрованих видимих карток
+  let currentVisibleItems = [];
+  projectItems.forEach(item => {
+    const category = item.getAttribute('data-category');
+    if (
+      (currentFilter === 'all' || category === currentFilter) &&
+      item.style.display !== 'none'
+    ) {
+      currentVisibleItems.push(item);
+    }
+  });
+
+  const filteredTotal = Array.from(projectItems).filter(item => {
+    const category = item.getAttribute('data-category');
+    return currentFilter === 'all' || category === currentFilter;
+  }).length;
+
+  const isAllVisible = currentVisibleItems.length === filteredTotal;
+
   if (isAllVisible) {
     visibleCount = 6; // ПОВЕРТАЄМОСЯ ДО 6 КАРТОК
   } else {
     visibleCount += 6; // ДОДАЄМО ЩЕ 6 КАРТОК
-    if (visibleCount > filteredData.length) visibleCount = filteredData.length;
+    if (visibleCount > filteredTotal) visibleCount = filteredTotal;
   }
-  renderProjects();
+  filterAndShow();
 });
+
+// Ініціалізація
+filterAndShow();
 
 // THEME
 const themeToggle = document.getElementById('themeToggle');
@@ -526,33 +331,99 @@ mobileMenuLinks.forEach(link => {
 // МОВНИЙ ПЕРЕМИКАЧ
 function updateLanguage(lang) {
   currentLang = lang;
+
+  // 1. Всі елементи з атрибутами data-en та data-uk (крім кнопок фільтрів)
   const allElements = document.querySelectorAll('[data-en], [data-uk]');
   allElements.forEach(el => {
+    // Пропускаємо кнопки фільтрів, бо їх обробимо окремо
+    if (el.classList && el.classList.contains('filter-btn')) return;
+
     const originalText = el.getAttribute(`data-${lang}`);
-    if (originalText && el.tagName !== 'BUTTON') {
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA')
+    if (originalText) {
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
         el.placeholder = originalText;
-      else el.innerHTML = originalText;
+      } else {
+        el.innerHTML = originalText;
+      }
     }
   });
+
+  // 2. Кнопки фільтрів (ALL, WORDPRESS, WEBFLOW, KAJABI, UI/UX DESIGN)
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  filterBtns.forEach(btn => {
+    const btnText = btn.getAttribute(`data-${lang}`);
+    if (btnText) {
+      btn.innerHTML = btnText;
+    }
+  });
+
+  // 3. Section-label (з ефектом друкування)
   const sectionLabels = document.querySelectorAll('.section-label');
   sectionLabels.forEach(label => {
     const text = label.getAttribute(`data-text-${lang}`);
     if (text) {
       label.setAttribute('data-text', text);
-      label.innerHTML = text;
+      // Очищаємо вміст, але зберігаємо атрибут data-typed, якщо він є
+      if (!label.hasAttribute('data-typed')) {
+        label.innerHTML = '';
+      } else {
+        label.innerHTML = text;
+      }
     }
   });
-  renderProjects();
+
+  // 4. Описи карток
+  document.querySelectorAll('.project-desc').forEach(p => {
+    const text = p.getAttribute(`data-${lang}`);
+    if (text) p.innerHTML = text;
+  });
+
+  // 5. Кнопки "Visit website"
+  document.querySelectorAll('.project-link').forEach(link => {
+    const text = link.getAttribute(`data-${lang}`);
+    if (text) link.innerHTML = text;
+  });
+
+  // 6. Featured-desc
+  document.querySelectorAll('.featured-desc').forEach(desc => {
+    const text = desc.getAttribute(`data-${lang}`);
+    if (text) desc.innerHTML = text;
+  });
+
+  // 7. Featured-link
+  document.querySelectorAll('.featured-link').forEach(link => {
+    const text = link.getAttribute(`data-${lang}`);
+    if (text) link.innerHTML = text;
+  });
+
+  // 8. Кнопка SHOW MORE
+  const btnText = showMoreBtn.getAttribute(`data-${lang}`);
+  if (btnText) {
+    const remainingMatch = showMoreBtn.textContent.match(/\((\d+)\)/);
+    const remaining = remainingMatch ? remainingMatch[1] : '';
+    if (
+      showMoreBtn.textContent.includes('SHOW LESS') ||
+      showMoreBtn.textContent.includes('ПРИХОВАТИ')
+    ) {
+      showMoreBtn.textContent =
+        btnText === 'SHOW MORE' ? 'SHOW LESS' : 'ПРИХОВАТИ';
+    } else {
+      showMoreBtn.textContent = btnText + (remaining ? ` (${remaining})` : '');
+    }
+  }
+
+  // 9. Логотип перемикача мови
   document.getElementById('langToggle').innerText = lang === 'en' ? 'UA' : 'EN';
   document.documentElement.lang = lang === 'en' ? 'en' : 'uk';
+
+  filterAndShow();
 }
+
 document.getElementById('langToggle').addEventListener('click', () => {
   const newLang = currentLang === 'en' ? 'uk' : 'en';
   updateLanguage(newLang);
 });
 
-renderProjects();
 updateLanguage('en');
 
 // ЗАКРИТТЯ МЕНЮ КНОПКОЮ ХРЕСТИК
@@ -560,3 +431,6 @@ const closeMenuBtn = document.getElementById('closeMenuBtn');
 if (closeMenuBtn) {
   closeMenuBtn.addEventListener('click', closeMobileMenu);
 }
+
+// Оновлення дати
+document.getElementById('currentYear').innerText = new Date().getFullYear();
