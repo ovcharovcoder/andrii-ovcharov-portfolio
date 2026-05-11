@@ -1082,4 +1082,7 @@ body.light .contact-section::after {
   .nav-controls {
     gap: 16px;
   }
+  .about-main p {
+    font-size: 1rem;
+  }
 }
