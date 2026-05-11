@@ -17,4 +17,4 @@ Personal portfolio website showcasing my UI/UX design and web development projec
 
 ## Live Demo
 
-[View Website](https://ovcharovcoder.github.io/andrii-ovcharov-portfolio/)
+[Visit Website](https://ovcharovcoder.github.io/andrii-ovcharov-portfolio/)
