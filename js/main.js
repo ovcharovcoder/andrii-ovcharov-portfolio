@@ -1,6 +1,6 @@
 // ФІЛЬТРАЦІЯ ТА ПАГІНАЦІЯ — ПРАЦЮЄ З HTML КАРТКАМИ
-const filterBtns = document.querySelectorAll('.filter-btn');
-const projectItems = document.querySelectorAll('.project-item');
+const filterBtns = document.querySelectorAll('.filter-bar__btn');
+const projectItems = document.querySelectorAll('.project-card');
 const showMoreBtn = document.getElementById('showMoreBtn');
 
 let currentFilter = 'all';
@@ -43,8 +43,8 @@ function filterAndShow() {
 // Обробники фільтрів
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+    filterBtns.forEach(b => b.classList.remove('filter-bar__btn--active'));
+    btn.classList.add('filter-bar__btn--active');
     currentFilter = btn.getAttribute('data-filter');
     visibleCount = 6; // СКИДАЄМО ДО 6 ПРИ ЗМІНІ ФІЛЬТРУ
     filterAndShow();
@@ -119,8 +119,8 @@ const sections = {
   about: document.getElementById('about'),
   contact: document.getElementById('contact'),
 };
-const navLinks = document.querySelectorAll('.nav-links a');
-const mobileNavLinks = document.querySelectorAll('.mobile-menu a');
+const navLinks = document.querySelectorAll('.nav__link');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav__link');
 
 function updateActiveNav() {
   const scrollPosition = window.scrollY + 300;
@@ -296,7 +296,7 @@ animate();
 const burgerBtn = document.getElementById('burgerBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 const mobileOverlay = document.getElementById('mobileOverlay');
-const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+const mobileMenuLinks = document.querySelectorAll('.mobile-nav__link');
 function closeMobileMenu() {
   mobileMenu.classList.remove('open');
   mobileOverlay.classList.remove('open');
@@ -328,15 +328,26 @@ mobileMenuLinks.forEach(link => {
   });
 });
 
+// ЗАКРИТТЯ МЕНЮ КНОПКОЮ ХРЕСТИК
+const closeMenuBtn = document.getElementById('closeMenuBtn');
+if (closeMenuBtn) {
+  closeMenuBtn.addEventListener('click', closeMobileMenu);
+}
+
 // МОВНИЙ ПЕРЕМИКАЧ
 function updateLanguage(lang) {
   currentLang = lang;
 
-  // 1. Всі елементи з атрибутами data-en та data-uk (крім кнопок фільтрів)
+  // 1. Всі елементи з атрибутами data-en та data-uk
   const allElements = document.querySelectorAll('[data-en], [data-uk]');
   allElements.forEach(el => {
     // Пропускаємо кнопки фільтрів, бо їх обробимо окремо
-    if (el.classList && el.classList.contains('filter-btn')) return;
+    if (
+      el.classList &&
+      (el.classList.contains('filter-bar__btn') ||
+        el.classList.contains('filter-btn'))
+    )
+      return;
 
     const originalText = el.getAttribute(`data-${lang}`);
     if (originalText) {
@@ -349,8 +360,8 @@ function updateLanguage(lang) {
   });
 
   // 2. Кнопки фільтрів (ALL, WORDPRESS, WEBFLOW, KAJABI, UI/UX DESIGN)
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  filterBtns.forEach(btn => {
+  const filterButtons = document.querySelectorAll('.filter-bar__btn');
+  filterButtons.forEach(btn => {
     const btnText = btn.getAttribute(`data-${lang}`);
     if (btnText) {
       btn.innerHTML = btnText;
@@ -372,26 +383,26 @@ function updateLanguage(lang) {
     }
   });
 
-  // 4. Описи карток
-  document.querySelectorAll('.project-desc').forEach(p => {
+  // 4. Описи карток (project-card__description)
+  document.querySelectorAll('.project-card__description').forEach(p => {
     const text = p.getAttribute(`data-${lang}`);
     if (text) p.innerHTML = text;
   });
 
-  // 5. Кнопки "Visit website"
-  document.querySelectorAll('.project-link').forEach(link => {
+  // 5. Кнопки "Visit website" (project-card__link)
+  document.querySelectorAll('.project-card__link').forEach(link => {
     const text = link.getAttribute(`data-${lang}`);
     if (text) link.innerHTML = text;
   });
 
-  // 6. Featured-desc
-  document.querySelectorAll('.featured-desc').forEach(desc => {
+  // 6. Featured-desc (featured-item__description)
+  document.querySelectorAll('.featured-item__description').forEach(desc => {
     const text = desc.getAttribute(`data-${lang}`);
     if (text) desc.innerHTML = text;
   });
 
-  // 7. Featured-link
-  document.querySelectorAll('.featured-link').forEach(link => {
+  // 7. Featured-link (featured-item__link)
+  document.querySelectorAll('.featured-item__link').forEach(link => {
     const text = link.getAttribute(`data-${lang}`);
     if (text) link.innerHTML = text;
   });
@@ -425,12 +436,6 @@ document.getElementById('langToggle').addEventListener('click', () => {
 });
 
 updateLanguage('en');
-
-// ЗАКРИТТЯ МЕНЮ КНОПКОЮ ХРЕСТИК
-const closeMenuBtn = document.getElementById('closeMenuBtn');
-if (closeMenuBtn) {
-  closeMenuBtn.addEventListener('click', closeMobileMenu);
-}
 
 // Оновлення дати
 document.getElementById('currentYear').innerText = new Date().getFullYear();
