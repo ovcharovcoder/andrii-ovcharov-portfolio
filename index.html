@@ -19,97 +19,155 @@
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="#" class="logo">Adrii Ovcharov</a>
-        <div class="nav-links">
-          <a
-            href="#work"
-            data-section="work"
-            data-en="SELECTED WORK"
-            data-uk="ОБРАНІ РОБОТИ"
-            >SELECTED WORK</a
+  <body class="page">
+    <!-- HEADER / NAVIGATION -->
+    <header class="header">
+      <div class="header__container">
+        <a href="#" class="header__logo">Adrii Ovcharov</a>
+
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a
+                href="#work"
+                class="nav__link"
+                data-section="work"
+                data-en="SELECTED WORK"
+                data-uk="ОБРАНІ РОБОТИ"
+                >SELECTED WORK</a
+              >
+            </li>
+            <li class="nav__item">
+              <a
+                href="#projects"
+                class="nav__link"
+                data-section="projects"
+                data-en="PORTFOLIO"
+                data-uk="ПОРТФОЛІО"
+                >PORTFOLIO</a
+              >
+            </li>
+            <li class="nav__item">
+              <a
+                href="#about"
+                class="nav__link"
+                data-section="about"
+                data-en="ABOUT ME"
+                data-uk="ПРО МЕНЕ"
+                >ABOUT ME</a
+              >
+            </li>
+            <li class="nav__item">
+              <a
+                href="#contact"
+                class="nav__link"
+                data-section="contact"
+                data-en="CONTACT"
+                data-uk="КОНТАКТИ"
+                >CONTACT</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__controls">
+          <button
+            class="lang-toggle"
+            id="langToggle"
+            aria-label="Language toggle"
           >
-          <a
-            href="#projects"
-            data-section="projects"
-            data-en="PORTFOLIO"
-            data-uk="ПОРТФОЛІО"
-            >PORTFOLIO</a
+            UA
+          </button>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Theme toggle"
           >
-          <a
-            href="#about"
-            data-section="about"
-            data-en="ABOUT ME"
-            data-uk="ПРО МЕНЕ"
-            >ABOUT ME</a
-          >
-          <a
-            href="#contact"
-            data-section="contact"
-            data-en="CONTACT"
-            data-uk="КОНТАКТИ"
-            >CONTACT</a
-          >
-        </div>
-        <div class="nav-controls">
-          <div class="lang-toggle" id="langToggle">UA</div>
-          <div class="theme-toggle" id="themeToggle">
             <i class="fas fa-moon"></i>
-          </div>
-          <div class="burger-btn" id="burgerBtn">
+          </button>
+          <button class="burger-btn" id="burgerBtn" aria-label="Menu">
             <span></span>
             <span></span>
             <span></span>
-          </div>
+          </button>
         </div>
       </div>
-    </nav>
+    </header>
 
+    <!-- MOBILE MENU -->
     <div class="mobile-menu-overlay" id="mobileOverlay"></div>
     <div class="mobile-menu" id="mobileMenu">
-      <div class="close-menu-btn" id="closeMenuBtn"></div>
-      <a href="#work" data-en="SELECTED WORK" data-uk="ОБРАНІ РОБОТИ"
-        >SELECTED WORK</a
-      >
-      <a href="#projects" data-en="PORTFOLIO" data-uk="ПОРТФОЛІО">PORTFOLIO</a>
-      <a href="#about" data-en="ABOUT ME" data-uk="ПРО МЕНЕ">ABOUT ME</a>
-      <a href="#contact" data-en="CONTACT" data-uk="КОНТАКТИ">CONTACT</a>
+      <button
+        class="mobile-menu__close"
+        id="closeMenuBtn"
+        aria-label="Close menu"
+      ></button>
+      <nav class="mobile-nav">
+        <a
+          href="#work"
+          class="mobile-nav__link"
+          data-en="SELECTED WORK"
+          data-uk="ОБРАНІ РОБОТИ"
+          >SELECTED WORK</a
+        >
+        <a
+          href="#projects"
+          class="mobile-nav__link"
+          data-en="PORTFOLIO"
+          data-uk="ПОРТФОЛІО"
+          >PORTFOLIO</a
+        >
+        <a
+          href="#about"
+          class="mobile-nav__link"
+          data-en="ABOUT ME"
+          data-uk="ПРО МЕНЕ"
+          >ABOUT ME</a
+        >
+        <a
+          href="#contact"
+          class="mobile-nav__link"
+          data-en="CONTACT"
+          data-uk="КОНТАКТИ"
+          >CONTACT</a
+        >
+      </nav>
     </div>
 
-    <main>
+    <main class="main">
+      <!-- HERO SECTION -->
       <section class="hero">
-        <canvas id="hero-canvas"></canvas>
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-          <div class="hero-headline">
+        <canvas id="hero-canvas" class="hero__canvas"></canvas>
+        <div class="hero__overlay"></div>
+        <div class="container hero__content">
+          <h1 class="hero__headline">
             <span
-              data-en="Web designer & developer for"
+              class="hero__headline-text"
+              data-en="Web designer &amp; developer for"
               data-uk="Вебдизайнер та розробник для"
-              >Web designer & developer for</span
+              >Web designer &amp; developer for</span
             ><br />
-            <span class="typewriter-accent" id="hero-typewriter"></span>
-          </div>
+            <span class="hero__typewriter" id="hero-typewriter"></span>
+          </h1>
           <div
-            class="hero-sub"
-            data-en="UI/UX design, Webflow & WordPress development focused on performance and usability."
+            class="hero__subtitle"
+            data-en="UI/UX design, Webflow &amp; WordPress development focused on performance and usability."
             data-uk="UI/UX дизайн, розробка на Webflow та WordPress з фокусом на продуктивність та зручність."
           >
-            UI/UX design, Webflow & WordPress development focused on performance
-            and usability.
+            UI/UX design, Webflow &amp; WordPress development focused on
+            performance and usability.
           </div>
-          <div class="hero-actions">
+          <div class="hero__actions">
             <a
               href="#work"
-              class="btn-primary"
+              class="btn btn--primary"
               data-en="View featured work"
               data-uk="Дивитись роботи"
               >View featured work</a
             >
             <a
               href="#contact"
-              class="btn-outline"
+              class="btn btn--text"
               data-en="Let's talk →"
               data-uk="Зв'язатись →"
               >Let's talk →</a
@@ -118,28 +176,32 @@
         </div>
       </section>
 
-      <section id="work" class="featured-section">
+      <!-- FEATURED WORK SECTION -->
+      <section id="work" class="section-featured">
         <div class="container">
           <div
             class="section-label"
             data-text-en="/ SELECTED WORK"
             data-text-uk="/ ОБРАНІ РОБОТИ"
-            data-text="/ SELECTED WORK"
           ></div>
 
-          <div class="featured-piece fade-up">
-            <div class="featured-visual">
-              <img src="images/chophytol.webp" alt="Chophytol" />
+          <div class="featured-item fade-up">
+            <div class="featured-item__media">
+              <img
+                class="featured-item__image"
+                src="images/chophytol.webp"
+                alt="Chophytol"
+              />
             </div>
-            <div class="featured-caption">
+            <div class="featured-item__details">
               <div>
-                <div class="featured-title">Chophytol</div>
-                <div class="featured-meta">
+                <h3 class="featured-item__title">Chophytol</h3>
+                <div class="featured-item__meta">
                   WordPress · Custom Theme · E‑commerce
                 </div>
               </div>
               <div
-                class="featured-desc"
+                class="featured-item__description"
                 data-en="Website for the French medical product 'Chophytol' with easy navigation of instructions, dosages, and release forms."
                 data-uk="Сайт для французького медичного препарату «Хофітол» із зручною навігацією інструкцій, дозувань та форм випуску."
               >
@@ -149,7 +211,7 @@
               <a
                 href="https://chophytol.ua"
                 target="_blank"
-                class="featured-link"
+                class="featured-item__link"
                 data-en="Visit website →"
                 data-uk="Відвідати сайт →"
                 >Visit website →</a
@@ -157,19 +219,23 @@
             </div>
           </div>
 
-          <div class="featured-piece fade-up">
-            <div class="featured-visual">
-              <img src="images/novam-d.webp" alt="NovaMD" />
+          <div class="featured-item fade-up">
+            <div class="featured-item__media">
+              <img
+                class="featured-item__image"
+                src="images/novam-d.webp"
+                alt="NovaMD"
+              />
             </div>
-            <div class="featured-caption">
+            <div class="featured-item__details">
               <div>
-                <div class="featured-title">NovaMD</div>
-                <div class="featured-meta">
+                <h3 class="featured-item__title">NovaMD</h3>
+                <div class="featured-item__meta">
                   Webflow · Landing Page · E‑commerce
                 </div>
               </div>
               <div
-                class="featured-desc"
+                class="featured-item__description"
                 data-en="Landing page for a menopause supplement brand. Built on Webflow with focus on speed, conversions, and responsive design."
                 data-uk="Лендінг для бренду добавок для жінок у період менопаузи. Розроблено на Webflow з акцентом на швидкість завантаження, конверсію та адаптивність."
               >
@@ -179,7 +245,7 @@
               <a
                 href="https://novam-d.webflow.io/"
                 target="_blank"
-                class="featured-link"
+                class="featured-item__link"
                 data-en="Visit website →"
                 data-uk="Відвідати сайт →"
                 >Visit website →</a
@@ -187,19 +253,23 @@
             </div>
           </div>
 
-          <div class="featured-piece fade-up">
-            <div class="featured-visual">
-              <img src="images/promentor.webp" alt="Promentor" />
+          <div class="featured-item fade-up">
+            <div class="featured-item__media">
+              <img
+                class="featured-item__image"
+                src="images/promentor.webp"
+                alt="Promentor"
+              />
             </div>
-            <div class="featured-caption">
+            <div class="featured-item__details">
               <div>
-                <div class="featured-title">ProMentor</div>
-                <div class="featured-meta">
+                <h3 class="featured-item__title">ProMentor</h3>
+                <div class="featured-item__meta">
                   Kajabi · Template Design · Coaching
                 </div>
               </div>
               <div
-                class="featured-desc"
+                class="featured-item__description"
                 data-en="A ready-to-fill Kajabi template for corporate coaching. Thought-out structure for quick launch of a company's training platform. For B2B segment."
                 data-uk="Готовий шаблон для Kajabi для корпоративного коучингу. Продумана структура для швидкого запуску навчальної платформи компанії. Для B2B-сегменту."
               >
@@ -210,7 +280,7 @@
               <a
                 href="https://www.inweba.com/template-promentor-home"
                 target="_blank"
-                class="featured-link"
+                class="featured-item__link"
                 data-en="Visit website →"
                 data-uk="Відвідати сайт →"
                 >Visit website →</a
@@ -218,19 +288,23 @@
             </div>
           </div>
 
-          <div class="featured-piece fade-up">
-            <div class="featured-visual">
-              <img src="images/barva.webp" alt="Barva" />
+          <div class="featured-item fade-up">
+            <div class="featured-item__media">
+              <img
+                class="featured-item__image"
+                src="images/barva.webp"
+                alt="Barva"
+              />
             </div>
-            <div class="featured-caption">
+            <div class="featured-item__details">
               <div>
-                <div class="featured-title">Barva</div>
-                <div class="featured-meta">
+                <h3 class="featured-item__title">Barva</h3>
+                <div class="featured-item__meta">
                   UI/UX Design · Figma · E‑commerce
                 </div>
               </div>
               <div
-                class="featured-desc"
+                class="featured-item__description"
                 data-en="Design of a premium women's clothing store with Ukrainian embroidery. Combining traditional motifs with modern luxury aesthetics."
                 data-uk="Дизайн преміум магазину жіночого одягу з українською вишивкою. Поєднання традиційних мотивів із сучасною luxury-естетикою."
               >
@@ -241,7 +315,7 @@
               <a
                 href="https://www.behance.net/gallery/248533281/BARVA-Premium-Ukrainian-Embroidery-Store"
                 target="_blank"
-                class="featured-link"
+                class="featured-item__link"
                 data-en="Visit website →"
                 data-uk="Відвідати сайт →"
                 >Visit website →</a
@@ -251,17 +325,18 @@
         </div>
       </section>
 
-      <section id="projects" class="portfolio">
+      <!-- PORTFOLIO SECTION -->
+      <section id="projects" class="section-portfolio">
         <div class="container">
           <div
             class="section-label"
             data-text-en="/ PORTFOLIO"
             data-text-uk="/ ПОРТФОЛІО"
-            data-text="/ PORTFOLIO"
           ></div>
-          <div class="filter-tabs">
+
+          <div class="filter-bar">
             <button
-              class="filter-btn active"
+              class="filter-bar__btn filter-bar__btn--active"
               data-filter="all"
               data-en="ALL"
               data-uk="ВСІ"
@@ -269,7 +344,7 @@
               ALL
             </button>
             <button
-              class="filter-btn"
+              class="filter-bar__btn"
               data-filter="wordpress"
               data-en="WORDPRESS"
               data-uk="WORDPRESS"
@@ -277,7 +352,7 @@
               WORDPRESS
             </button>
             <button
-              class="filter-btn"
+              class="filter-bar__btn"
               data-filter="webflow"
               data-en="WEBFLOW"
               data-uk="WEBFLOW"
@@ -285,7 +360,7 @@
               WEBFLOW
             </button>
             <button
-              class="filter-btn"
+              class="filter-bar__btn"
               data-filter="kajabi"
               data-en="KAJABI"
               data-uk="KAJABI"
@@ -293,7 +368,7 @@
               KAJABI
             </button>
             <button
-              class="filter-btn"
+              class="filter-bar__btn"
               data-filter="design"
               data-en="UI/UX DESIGN"
               data-uk="UI/UX ДИЗАЙН"
@@ -301,17 +376,22 @@
               UI/UX DESIGN
             </button>
           </div>
+
           <div class="projects-grid" id="projects-grid">
             <!-- WORDPRESS PROJECTS -->
-            <div class="project-item" data-category="wordpress">
-              <div class="project-img">
-                <img src="images/chophytol.webp" alt="Chophytol" />
+            <div class="project-card" data-category="wordpress">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/chophytol.webp"
+                  alt="Chophytol"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">WORDPRESS</div>
-                <h3>Chophytol</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">WORDPRESS</div>
+                <h3 class="project-card__title">Chophytol</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Website for the French medical product 'Chophytol' with easy navigation of instructions, dosages, and release forms."
                   data-uk="Сайт для французького медичного препарату «Хофітол» із зручною навігацією інструкцій, дозувань та форм випуску."
                 >
@@ -321,22 +401,27 @@
                 <a
                   href="https://chophytol.ua"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="wordpress">
-              <div class="project-img">
-                <img src="images/cardonat.webp" alt="Cardonat" />
+
+            <div class="project-card" data-category="wordpress">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/cardonat.webp"
+                  alt="Cardonat"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">WORDPRESS</div>
-                <h3>Cardonat</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">WORDPRESS</div>
+                <h3 class="project-card__title">Cardonat</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Website for 'Cardonat' supplement — a coenzyme complex with carnitine, lysine and B vitamins for recovery after illnesses and overstrain."
                   data-uk="Сайт для БАД «Кардонат» — коферментний комплекс з карнітином, лізином та вітамінами групи В для відновлення після хвороб та перенапруження."
                 >
@@ -347,22 +432,27 @@
                 <a
                   href="https://cardonat.com.ua/"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="wordpress">
-              <div class="project-img">
-                <img src="images/noksprey.webp" alt="Noksprey" />
+
+            <div class="project-card" data-category="wordpress">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/noksprey.webp"
+                  alt="Noksprey"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">WORDPRESS</div>
-                <h3>Noksprey</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">WORDPRESS</div>
+                <h3 class="project-card__title">Noksprey</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Website for 'Noksprey' — a line of products from Sperco for treating runny nose in adults and children."
                   data-uk="Сайт для «Нокспрей» — лінійки засобів від Sperco для лікування нежитю у дорослих та дітей."
                 >
@@ -372,22 +462,27 @@
                 <a
                   href="https://noksprey.com.ua/"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="wordpress">
-              <div class="project-img">
-                <img src="images/langes.webp" alt="Langes" />
+
+            <div class="project-card" data-category="wordpress">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/langes.webp"
+                  alt="Langes"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">WORDPRESS</div>
-                <h3>Langes</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">WORDPRESS</div>
+                <h3 class="project-card__title">Langes</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Website for 'Langes' — a cough treatment and respiratory protection remedy that thins mucus and activates local immunity."
                   data-uk="Сайт для «Лангес» — засобу для лікування кашлю та захисту дихальних шляхів."
                 >
@@ -398,22 +493,27 @@
                 <a
                   href="https://langes.com.ua/"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="wordpress">
-              <div class="project-img">
-                <img src="images/erotex.webp" alt="Erotex" />
+
+            <div class="project-card" data-category="wordpress">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/erotex.webp"
+                  alt="Erotex"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">WORDPRESS</div>
-                <h3>Erotex</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">WORDPRESS</div>
+                <h3 class="project-card__title">Erotex</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Website for 'Erotex' — a delicate solution for couples who value natural sensations."
                   data-uk="Сайт для «Еротекс» — делікатне рішення для пар."
                 >
@@ -423,22 +523,27 @@
                 <a
                   href="https://erotex.com.ua/"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="wordpress">
-              <div class="project-img">
-                <img src="images/lactazik.webp" alt="Lactazik" />
+
+            <div class="project-card" data-category="wordpress">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/lactazik.webp"
+                  alt="Lactazik"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">WORDPRESS</div>
-                <h3>Lactazik</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">WORDPRESS</div>
+                <h3 class="project-card__title">Lactazik</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Website for 'Lactazik' — a remedy that helps children digest milk and eliminates colic and bloating."
                   data-uk="Сайт для «Лактазік» — засіб, який допомагає дітям засвоювати молоко."
                 >
@@ -448,7 +553,7 @@
                 <a
                   href="https://lactazik.com.ua/"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
@@ -457,15 +562,19 @@
             </div>
 
             <!-- WEBFLOW PROJECTS -->
-            <div class="project-item" data-category="webflow">
-              <div class="project-img">
-                <img src="images/novam-d.webp" alt="NovaMD" />
+            <div class="project-card" data-category="webflow">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/novam-d.webp"
+                  alt="NovaMD"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">WEBFLOW</div>
-                <h3>NovaMD</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">WEBFLOW</div>
+                <h3 class="project-card__title">NovaMD</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Landing page for a menopause supplement brand. Built on Webflow with focus on speed, conversions, and responsive design."
                   data-uk="Лендінг для бренду добавок для жінок у період менопаузи. Розроблено на Webflow з акцентом на швидкість завантаження, конверсію та адаптивність."
                 >
@@ -476,22 +585,27 @@
                 <a
                   href="https://novam-d.webflow.io/"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="webflow">
-              <div class="project-img">
-                <img src="images/dreamhouse.webp" alt="Dream House" />
+
+            <div class="project-card" data-category="webflow">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/dreamhouse.webp"
+                  alt="Dream House"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">WEBFLOW</div>
-                <h3>Dream House</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">WEBFLOW</div>
+                <h3 class="project-card__title">Dream House</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Website for 'Dream House' construction company — professional home construction according to any designs."
                   data-uk="Сайт будівельної компанії «Dream House» для професійного будівництва будинків."
                 >
@@ -501,7 +615,7 @@
                 <a
                   href="https://dream-h.webflow.io/"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
@@ -510,15 +624,19 @@
             </div>
 
             <!-- KAJABI PROJECTS -->
-            <div class="project-item" data-category="kajabi">
-              <div class="project-img">
-                <img src="images/promentor.webp" alt="ProMentor" />
+            <div class="project-card" data-category="kajabi">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/promentor.webp"
+                  alt="ProMentor"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">KAJABI</div>
-                <h3>ProMentor</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">KAJABI</div>
+                <h3 class="project-card__title">ProMentor</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="A ready-to-fill Kajabi template for corporate coaching. For B2B segment."
                   data-uk="Готовий шаблон для Kajabi для корпоративного коучингу. Для B2B-сегменту."
                 >
@@ -528,22 +646,27 @@
                 <a
                   href="https://www.inweba.com/template-promentor-home"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="kajabi">
-              <div class="project-img">
-                <img src="images/samantha.webp" alt="Samantha Parker" />
+
+            <div class="project-card" data-category="kajabi">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/samantha.webp"
+                  alt="Samantha Parker"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">KAJABI</div>
-                <h3>Samantha Parker</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">KAJABI</div>
+                <h3 class="project-card__title">Samantha Parker</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="A ready-to-fill Kajabi template for personal coaching."
                   data-uk="Готовий шаблон для Kajabi для персонального коучингу."
                 >
@@ -552,22 +675,27 @@
                 <a
                   href="https://kajabi-partner-5e06de.mykajabi.com/samantha-coaching-home-en"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="kajabi">
-              <div class="project-img">
-                <img src="images/sabina.webp" alt="Sabina Hertiz" />
+
+            <div class="project-card" data-category="kajabi">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/sabina.webp"
+                  alt="Sabina Hertiz"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">KAJABI</div>
-                <h3>Sabina Hertiz</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">KAJABI</div>
+                <h3 class="project-card__title">Sabina Hertiz</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="An innovative Kajabi template for business coaches."
                   data-uk="Інноваційний шаблон для Kajabi для бізнес-коучів."
                 >
@@ -576,22 +704,27 @@
                 <a
                   href="https://www.inweba.com/sabina-hertiz-home"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="kajabi">
-              <div class="project-img">
-                <img src="images/dickensacademy.webp" alt="Dickens Academy" />
+
+            <div class="project-card" data-category="kajabi">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/dickensacademy.webp"
+                  alt="Dickens Academy"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">KAJABI</div>
-                <h3>Dickens Academy</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">KAJABI</div>
+                <h3 class="project-card__title">Dickens Academy</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Website for Dickens Academy — corporate coaching on Kajabi."
                   data-uk="Сайт для Dickens Academy — корпоративного коучингу на Kajabi."
                 >
@@ -600,22 +733,27 @@
                 <a
                   href="https://www.dickensacademy.org/"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="kajabi">
-              <div class="project-img">
-                <img src="images/mtc.webp" alt="MTC Rider" />
+
+            <div class="project-card" data-category="kajabi">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/mtc.webp"
+                  alt="MTC Rider"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">KAJABI</div>
-                <h3>MTC Rider</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">KAJABI</div>
+                <h3 class="project-card__title">MTC Rider</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Website for MTC Rider Academy on Kajabi. Safe motorcycle riding courses."
                   data-uk="Сайт для MTC Rider Academy на Kajabi. Курси з безпечного водіння мотоциклів."
                 >
@@ -625,22 +763,27 @@
                 <a
                   href="https://ridingsmart.mykajabi.com/"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="kajabi">
-              <div class="project-img">
-                <img src="images/physioloops.webp" alt="Physioloops" />
+
+            <div class="project-card" data-category="kajabi">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/physioloops.webp"
+                  alt="Physioloops"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">KAJABI</div>
-                <h3>Physioloops</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">KAJABI</div>
+                <h3 class="project-card__title">Physioloops</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Website for Physioloops on Kajabi. Medical practice treating TMJ disorders."
                   data-uk="Сайт для Physioloops на Kajabi. Медична практика."
                 >
@@ -650,22 +793,27 @@
                 <a
                   href="https://www.physioloops.com/"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="kajabi">
-              <div class="project-img">
-                <img src="images/train_for_birth.webp" alt="Train for Birth" />
+
+            <div class="project-card" data-category="kajabi">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/train_for_birth.webp"
+                  alt="Train for Birth"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">KAJABI</div>
-                <h3>Train for Birth</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">KAJABI</div>
+                <h3 class="project-card__title">Train for Birth</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Website for Train for Birth on Kajabi. Home birth preparation."
                   data-uk="Сайт для Train for Birth на Kajabi. Підготовка до домашніх пологів."
                 >
@@ -674,7 +822,7 @@
                 <a
                   href="https://www.trainforbirth.com/"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
@@ -683,15 +831,19 @@
             </div>
 
             <!-- UI/UX DESIGN PROJECTS -->
-            <div class="project-item" data-category="design">
-              <div class="project-img">
-                <img src="images/barva.webp" alt="Barva" />
+            <div class="project-card" data-category="design">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/barva.webp"
+                  alt="Barva"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">UI/UX DESIGN</div>
-                <h3>Barva</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">UI/UX DESIGN</div>
+                <h3 class="project-card__title">Barva</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Design of a premium women's clothing store with Ukrainian embroidery."
                   data-uk="Дизайн преміум магазину жіночого одягу з українською вишивкою."
                 >
@@ -701,22 +853,27 @@
                 <a
                   href="https://www.behance.net/gallery/248533281/BARVA-Premium-Ukrainian-Embroidery-Store"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="design">
-              <div class="project-img">
-                <img src="images/luna.webp" alt="LUNA" />
+
+            <div class="project-card" data-category="design">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/luna.webp"
+                  alt="LUNA"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">UI/UX DESIGN</div>
-                <h3>LUNA</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">UI/UX DESIGN</div>
+                <h3 class="project-card__title">LUNA</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Conceptual design for a modern women's lingerie e-commerce website focused on elegance, clarity, and emotional connection."
                   data-uk="Концептуальний дизайн сучасного сайту жіночої білизни."
                 >
@@ -727,22 +884,27 @@
                 <a
                   href="https://www.behance.net/gallery/248752563/LUNA-Lingerie-E-commerce-Website-Design"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="design">
-              <div class="project-img">
-                <img src="images/travelmate.webp" alt="TravelMate" />
+
+            <div class="project-card" data-category="design">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/travelmate.webp"
+                  alt="TravelMate"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">UI/UX DESIGN</div>
-                <h3>TravelMate</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">UI/UX DESIGN</div>
+                <h3 class="project-card__title">TravelMate</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Travel booking platform design focused on conversion, optimized UX, and premium visual style."
                   data-uk="Дизайн платформи бронювання подорожей з фокусом на конверсію."
                 >
@@ -752,22 +914,27 @@
                 <a
                   href="https://www.behance.net/gallery/244190717/TravelMate-UXUI-Design-for-Travel-Marketplace"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="design">
-              <div class="project-img">
-                <img src="images/family_law.webp" alt="Family Law" />
+
+            <div class="project-card" data-category="design">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/family_law.webp"
+                  alt="Family Law"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">UI/UX DESIGN</div>
-                <h3>Family Law</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">UI/UX DESIGN</div>
+                <h3 class="project-card__title">Family Law</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Conceptual website design for a family law attorney."
                   data-uk="Концептуальний дизайн сайту для адвоката з сімейного права."
                 >
@@ -776,22 +943,27 @@
                 <a
                   href="https://www.behance.net/gallery/248941511/Family-Law-Attorney-Website"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="design">
-              <div class="project-img">
-                <img src="images/ecowave.webp" alt="EcoWave" />
+
+            <div class="project-card" data-category="design">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/ecowave.webp"
+                  alt="EcoWave"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">UI/UX DESIGN</div>
-                <h3>EcoWave</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">UI/UX DESIGN</div>
+                <h3 class="project-card__title">EcoWave</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Premium environmental brand concept about protecting the environment and fighting plastic."
                   data-uk="Преміальна екологічна концепція бренду про захист довкілля."
                 >
@@ -801,22 +973,27 @@
                 <a
                   href="https://www.behance.net/gallery/242585795/EcoWave-UIUX-Design-for-Sustainable-Product-Brand"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="design">
-              <div class="project-img">
-                <img src="images/fitlife.webp" alt="FitLife" />
+
+            <div class="project-card" data-category="design">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/fitlife.webp"
+                  alt="FitLife"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">UI/UX DESIGN</div>
-                <h3>FitLife</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">UI/UX DESIGN</div>
+                <h3 class="project-card__title">FitLife</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Modern landing page design for an online fitness platform focused on home workouts."
                   data-uk="Дизайн сучасної лендінг-сторінки для онлайн-фітнес-платформи."
                 >
@@ -826,22 +1003,27 @@
                 <a
                   href="https://www.behance.net/gallery/247697517/FitLife-online-fitness-platform-landing-page-design"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
                 >
               </div>
             </div>
-            <div class="project-item" data-category="design">
-              <div class="project-img">
-                <img src="images/vineyard_dream.webp" alt="Vineyard Dream" />
+
+            <div class="project-card" data-category="design">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="images/vineyard_dream.webp"
+                  alt="Vineyard Dream"
+                />
               </div>
-              <div class="project-info">
-                <div class="project-category">UI/UX DESIGN</div>
-                <h3>Vineyard Dream</h3>
+              <div class="project-card__info">
+                <div class="project-card__category">UI/UX DESIGN</div>
+                <h3 class="project-card__title">Vineyard Dream</h3>
                 <p
-                  class="project-desc"
+                  class="project-card__description"
                   data-en="Website design for a small family winery nestled among hills and vineyards."
                   data-uk="Дизайн сайту для невеликої сімейної виноробні."
                 >
@@ -851,7 +1033,7 @@
                 <a
                   href="https://www.behance.net/gallery/226707087/Vineyard-Dream-A-Tasteful-UIUX-Story"
                   target="_blank"
-                  class="project-link"
+                  class="project-card__link"
                   data-en="Visit website →"
                   data-uk="Відвідати сайт →"
                   >Visit website →</a
@@ -859,37 +1041,41 @@
               </div>
             </div>
           </div>
-          <div class="show-more-wrapper">
+
+          <div class="projects-actions">
             <button
-              class="show-more-btn"
+              class="btn-more"
               id="showMoreBtn"
               data-en="SHOW MORE"
               data-uk="ПОКАЗАТИ БІЛЬШЕ"
             >
-              SHOW MORE (3)
+              SHOW MORE
             </button>
           </div>
         </div>
       </section>
 
-      <section id="about" class="about-section">
+      <!-- ABOUT SECTION -->
+      <section id="about" class="section-about">
         <div class="container">
           <div
             class="section-label"
             data-text-en="/ ABOUT ME"
             data-text-uk="/ ПРО МЕНЕ"
-            data-text="/ ABOUT ME"
           ></div>
+
           <div class="about-grid fade-up">
-            <div class="about-main">
+            <div class="about__content">
               <p
+                class="about__text"
                 data-en="I’m Andrii Ovcharov, a UI/UX designer and web developer who creates modern and effective digital products."
                 data-uk="Я Андрій Овчаров — UI/UX дизайнер та веб-розробник, який створює сучасні та ефективні цифрові продукти."
               >
                 I’m Andrii Ovcharov, a UI/UX designer and web developer who
-                creates modern and effective digital products..
+                creates modern and effective digital products.
               </p>
               <p
+                class="about__text"
                 data-en="I combine design, strategy, and development, creating modern websites with a focus on performance, aesthetics, and user experience."
                 data-uk="Поєдную дизайн, стратегію та розробку, створюючи сучасні вебсайти з акцентом на продуктивність, естетику та користувацький досвід."
               >
@@ -897,54 +1083,61 @@
                 websites with a focus on performance, aesthetics, and user
                 experience.
               </p>
-              <div class="focus-items">
-                <span class="focus-item">Design leadership</span>
-                <span class="focus-item">Technical direction</span>
-                <span class="focus-item">Digital strategy</span>
-                <span class="focus-item">Webflow expert</span>
-                <span class="focus-item">WordPress dev</span>
-                <span class="focus-item">UI/UX design</span>
-              </div>
+              <ul class="about__tags">
+                <li class="about__tag">Design leadership</li>
+                <li class="about__tag">Technical direction</li>
+                <li class="about__tag">Digital strategy</li>
+                <li class="about__tag">Webflow expert</li>
+                <li class="about__tag">WordPress dev</li>
+                <li class="about__tag">UI/UX design</li>
+              </ul>
             </div>
-            <div class="about-photo">
-              <div class="photo-frame">
-                <img src="images/avatar.webp" alt="Adrii Ovcharov" />
+            <div class="about__photo">
+              <div class="about__photo-frame">
+                <img
+                  class="about__image"
+                  src="images/avatar.webp"
+                  alt="Adrii Ovcharov"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="contact-section">
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section-contact">
         <div class="container">
           <div
             class="section-label"
             data-text-en="/ CONTACT ME"
             data-text-uk="/ ОБГОВОРИТИ ПРОЄКТ"
-            data-text="/ CONTACT ME"
           ></div>
-          <div class="contact-headline fade-up">
+
+          <div class="contact__headline fade-up">
             <span
+              class="contact__title"
               data-en="Let's build the future of your brand together."
               data-uk="Давайте разом побудуємо майбутнє вашого бренду."
               >Let's build the future of your brand together.</span
             >
             <span
-              class="contact-subline"
+              class="contact__subtitle"
               data-en="Get in touch."
               data-uk="Зв'яжіться зі мною для обговорення проєкту."
               >Get in touch.</span
             >
           </div>
-          <div class="contact-links fade-up">
-            <a href="mailto:ovcharovcoder@gmail.com" class="contact-link">
+
+          <div class="contact__links fade-up">
+            <a href="mailto:ovcharovcoder@gmail.com" class="contact__link">
               <i class="fas fa-envelope"></i>
               <span>ovcharovcoder@gmail.com</span>
             </a>
             <a
               href="https://t.me/Ovcharov_Andrii"
               target="_blank"
-              class="contact-link"
+              class="contact__link"
             >
               <i class="fab fa-telegram-plane"></i>
               <span>Telegram</span>
@@ -952,7 +1145,7 @@
             <a
               href="https://www.facebook.com/OvcharovCoder"
               target="_blank"
-              class="contact-link"
+              class="contact__link"
             >
               <i class="fab fa-facebook-f"></i>
               <span>Facebook</span>
@@ -960,7 +1153,7 @@
             <a
               href="https://www.linkedin.com/in/andrii-ovcharov-101a24196/"
               target="_blank"
-              class="contact-link"
+              class="contact__link"
             >
               <i class="fab fa-linkedin-in"></i>
               <span>LinkedIn</span>
